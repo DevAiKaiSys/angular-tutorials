@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HousingLocation } from './housing-location';
 import { HousingLocationInfo } from '../housinglocation';
+import { ActivatedRoute } from '@angular/router';
 
 describe('HousingLocation', () => {
   let component: HousingLocation;
@@ -9,7 +10,17 @@ describe('HousingLocation', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HousingLocation]
+      imports: [HousingLocation],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              params: {}
+            }
+          }
+        }
+      ]
     })
       .compileComponents();
 
