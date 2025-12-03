@@ -44,6 +44,10 @@ To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use th
 ng test
 ```
 
+```bash
+ng test --no-watch --no-progress
+```
+
 ## Running end-to-end tests
 
 For end-to-end (e2e) testing, run:
