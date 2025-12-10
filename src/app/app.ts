@@ -1,13 +1,16 @@
 import { Component } from "@angular/core";
-import { User } from "./user";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "app-root",
   template: `
-    <section>
-      <app-user />
-    </section>
+    <nav>
+      <a href="/">Home</a>
+      |
+      <a href="/user">User</a>
+    </nav>
+    <router-outlet />
   `,
-  imports: [User],
+  imports: [RouterOutlet],
 })
 export class App { }
