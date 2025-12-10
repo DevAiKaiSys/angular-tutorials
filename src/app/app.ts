@@ -1,9 +1,12 @@
-import {Component} from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  template: `
-    Welcome to Angular!
+  selector: "app-root",
+  template: `Hello Universe`,
+  styles: `
+    :host {
+      color: #a144eb;
+    }
   `,
 })
 export class App {}
