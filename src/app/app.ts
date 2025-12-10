@@ -1,14 +1,22 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-root",
-  template: `Hello {{ city }}, {{ 1 + 1 }}`,
-  styles: `
-    :host {
-      color: #a144eb;
-    }
+  selector: 'app-user',
+  template: `
+    Username: {{ username }}
   `,
 })
-export class App {
-  city = 'San Francisco';
+export class User {
+  username = 'youngTech';
 }
+
+@Component({
+  selector: "app-root",
+  template: `
+    <section>
+      <app-user />
+    </section>
+  `,
+  imports: [User],
+})
+export class App { }
